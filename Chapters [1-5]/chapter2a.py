@@ -4,8 +4,8 @@ Note that raw_input will pop up a dialog box.
 Enter Sarah in the pop-up box when you are prompted so your output will match the desired output.
 '''
 # The code below almost works
-#name = raw_input("Enter your name")
+#name = raw_input("Enter your name: ")
 #print "Howdy"
-name = raw_input("Enter your name")
+name = raw_input("Enter your name: ")
 print 'Hello ' + name
 #when prompted enter the name 'Sarah'

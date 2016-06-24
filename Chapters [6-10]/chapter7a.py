@@ -8,3 +8,4 @@ if len(name) < 3 : name = 'words.txt'
 fh = open(name,'r')
 for line in fh:
 	print line.upper().strip()
+fh.close()

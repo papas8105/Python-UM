@@ -13,6 +13,7 @@ testing below enter mbox-short.txt as the file name.
 '''
 # Use the file name mbox-short.txt as the file name
 fname = raw_input("Enter file name: ")
+if len(fname) < 3:  fname = 'mbox-short.txt'
 fh = open(fname)
 count = 0; l = 0;
 for line in fh:
@@ -21,4 +22,5 @@ for line in fh:
         pos = line.find(':') + 1
         n = float(line[pos:])
         l += n
-print "Average spam confidence:", l/coun
+fh.close()
+print "Average spam confidence:", l/count
