@@ -3,7 +3,7 @@ fh = open('regex_sum_288502.txt')
 s = 0;w = [];
 for line in fh:
 	line = line.rstrip()
-	x  = re.findall('\S*[0-9]\S*',line)
+	x  = re.findall('[0-9]+',line) #or '\S*[0-9]\S*'
 	if x == []:
 		continue
 	else:
