@@ -25,7 +25,6 @@ for ii in range(count):
         ls.append(tag)
     url = ls[position-1].get('href', None)
     ls = []
-print 'Retrieving:',url
 print '\n\n'
 s = re.findall('_+.+_+(.+)\.',url)
 print 'The last name retrieved from the process was: ', str(s[0])
