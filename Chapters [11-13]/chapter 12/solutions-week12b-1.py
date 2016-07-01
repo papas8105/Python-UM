@@ -1,5 +1,6 @@
 '''
-You need to adjust this code to look for span tags and pull out the text content of the span tag, convert them to integers and add them up to complete the assignment. 
+You need to adjust this code to look for span tags and pull out the text content of the span tag, convert them to integers and
+add them up to complete the assignment. 
 '''
 import urllib
 from BeautifulSoup import *
