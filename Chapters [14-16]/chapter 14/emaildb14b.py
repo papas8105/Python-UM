@@ -35,10 +35,10 @@ cur.execute('''
 CREATE TABLE Counts (org TEXT, count INTEGER)''')
 
 fname = raw_input('Enter file name: ')
-if ( len(fname) < 1 ) : fname = 'mbox-short.txt'
+if ( len(fname) < 1 ) : fname = 'mbox.txt'
 fh = open(fname)
 for line in fh:
-    if not line.startswith('From: ') : continue
+    if not line.startswith('From ') : continue
     pieces = line.split()
     org = re.findall('@(.*)$',pieces[1])
     org = org[0]
@@ -65,4 +65,3 @@ for row in cur.execute(sqlstr) :
     print str(row[0]), row[1]
 
 cur.close()
-
