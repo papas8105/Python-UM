@@ -51,22 +51,3 @@ data = urllib.urlopen(serviceurl).read()
 print 'Retrieved ' + str(len(data))
 data = json.loads(data)
 print 'Place id ',data['results'][0]['place_id']
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
