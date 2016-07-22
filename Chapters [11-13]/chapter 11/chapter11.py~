@@ -2,7 +2,7 @@
 Find the sum of all the integers in the text.
 '''
 import re
-fh = open('regex_sum_288502.txt','r')
+fh = open('regex_sum_288502.txt')
 s = 0;
 for line in fh:
 	line = line.rstrip()
