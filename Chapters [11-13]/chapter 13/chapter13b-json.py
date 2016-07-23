@@ -16,15 +16,15 @@ Note: Each student will have a distinct data url for the assignment - so only us
 import json
 import urllib
 import re
-url = raw_input('Enter Location: ')
+url      = raw_input('Enter Location: ')
 if re.search('^http',url) or len(url)<3 or len(url) == 0:
-	url = 'http://python-data.dr-chuck.net/comments_288508.json'
+	url  = 'http://python-data.dr-chuck.net/comments_288508.json'
 print 'Retrieving ' + url
-data = urllib.urlopen(url).read()
+data     = urllib.urlopen(url).read()
 print 'Retrieved ' + str(len(data)) + ' characters'
-data = json.loads(data)
+data     = json.loads(data)
 comments = data['comments']
-l = []
+l        = []
 for comment in comments:
         l.append(comment['count'])
 print 'Count: ', len(l)

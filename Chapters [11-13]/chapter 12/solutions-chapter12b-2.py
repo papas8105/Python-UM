@@ -9,22 +9,22 @@ follow that link and repeat the process a number of times and report the last na
 import urllib
 from BeautifulSoup import *
 import re
-url=raw_input("Enter URL: ")
+url = raw_input("Enter URL: ")
 if len(url) < 3:
-	url = 'http://python-data.dr-chuck.net/known_by_Brandi.html'
+	url  = 'http://python-data.dr-chuck.net/known_by_Brandi.html'
 count=int(raw_input("Enter count:"))
 position=int(raw_input("Enter position:"))
 #7 times 18 position
-ls = []
+ls       = []
 for ii in range(count):
     print "Retrieving:",url
-    html=urllib.urlopen(url).read()
-    soup=BeautifulSoup(html)
-    tags=soup('a')
+    html = urllib.urlopen(url).read()
+    soup = BeautifulSoup(html)
+    tags = soup('a')
     for tag in tags:
         ls.append(tag)
-    url = ls[position-1].get('href', None)
-    ls = []
+    url  = ls[position-1].get('href', None)
+    ls   = []
 print '\n\n'
 s = re.findall('_+.+_+(.+)\.',url)
 print 'The last name retrieved from the process was: ', str(s[0])

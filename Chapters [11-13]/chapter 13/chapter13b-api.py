@@ -44,11 +44,11 @@ match for this assignment.
 '''
 import json
 import urllib
-address = raw_input('Enter the place name: ')
+address    = raw_input('Enter the place name: ')
 serviceurl = 'http://python-data.dr-chuck.net/geojson?'
 serviceurl = serviceurl + urllib.urlencode({'sensor':'false' , 'address':address})
 print 'Retrieving ' + serviceurl
-data = urllib.urlopen(serviceurl).read()
+data       = urllib.urlopen(serviceurl).read()
 print 'Retrieved ' + str(len(data))
-data = json.loads(data)
+data       = json.loads(data)
 print 'Place id ',data['results'][0]['place_id']

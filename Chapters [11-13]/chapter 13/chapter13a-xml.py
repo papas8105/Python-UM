@@ -16,15 +16,15 @@ Actual data: http://python-data.dr-chuck.net/comments_288504.xml (Sum ends with 
 '''
 import urllib
 import xml.etree.ElementTree as ET
-address = raw_input('Enter location: ')
+address  = raw_input('Enter location: ')
 if len(address) < 1 : address = 'http://python-data.dr-chuck.net/comments_288504.xml'
 print 'Retrieving ', address
-page = urllib.urlopen(address)
-data = page.read()
+page     = urllib.urlopen(address)
+data     = page.read()
 print 'Retrieved ' , len(data), ' characters'
-tree = ET.fromstring(data)
+tree     = ET.fromstring(data)
 comments = tree.findall('comments/comment')
-counts = []
+counts   = []
 for comment in comments:
 	counts.append(int(comment.find('count').text))
 print 'Count :', len(counts)
