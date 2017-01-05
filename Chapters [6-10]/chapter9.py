@@ -8,12 +8,12 @@ the program reads through the dictionary using a maximum loop to find the most p
 name = raw_input("Enter file: ")
 if len(name) < 1 : 
     name = "mbox-short.txt"
-dct = {}
-handle = open(name , 'r')
+dct      = {}
+handle   = open(name , 'r')
 for line in handle:
     if line.startswith('From ') and len(line) > 2:
         line = line.split()
         dct[line[1]] = dct.get(line[1] , 0) + 1
-m = dct.values()
-m = max(m)
+m        = dct.values()
+m        = max(m)
 print list(dct.keys())[list(dct.values()).index(m)] , m

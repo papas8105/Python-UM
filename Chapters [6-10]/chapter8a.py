@@ -8,8 +8,8 @@ You can download the sample data at http://www.pythonlearn.com/code/romeo.txt
 fname = raw_input('Enter file name: ')
 if len(fname) < 3:
 	fname = 'romeo.txt'
-lst = list();
-fh = open(fname , 'r')
+lst   = list();
+fh    = open(fname , 'r')
 for line in fh:
 	line = line.split()
 	for word in line:

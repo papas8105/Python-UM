@@ -5,11 +5,11 @@ If the user enters anything other than a valid number catch it with a try/except
 the number.
 Enter the numbers from the book for problem 5.1 and Match the desired output as shown.  
 '''
-largest = None
+largest  = None
 smallest = None
 l = list()
 while True:
-    num = raw_input("Enter a number: ")
+    num      =  raw_input("Enter a number: ")
     if  num  == "done": 
     	break
     try:

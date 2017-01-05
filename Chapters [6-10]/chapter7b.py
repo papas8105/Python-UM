@@ -13,14 +13,16 @@ testing below enter mbox-short.txt as the file name.
 '''
 # Use the file name mbox-short.txt as the file name
 fname = raw_input("Enter file name: ")
-if len(fname) < 3:  fname = 'mbox-short.txt'
-fh = open(fname)
-count = 0; l = 0;
+if len(fname) < 3:
+	fname = 'mbox-short.txt'
+fh    = open(fname,'r')
+count = 0;
+l     = 0;
 for line in fh:
     if line.startswith("X-DSPAM-Confidence:") :
         count += 1
-        pos = line.find(':') + 1
-        n = float(line[pos:])
-        l += n
+        pos    = line.find(':') + 1
+        n      = float(line[pos:])
+        l     += n
 fh.close()
-print "Average spam confidence:", l/count
+print "Average spam confidence:", l / count

@@ -8,8 +8,9 @@ Hint: make sure not to include the lines that start with 'From:'.
 You can download the sample data at http://www.pythonlearn.com/code/mbox-short.txt
 '''
 fname = raw_input("Enter file name: ")
-if len(fname) < 1 : fname = "mbox-short.txt"
-fh = open(fname)
+if len(fname) < 1 :
+	fname = "mbox-short.txt"
+fh    = open(fname)
 count = 0
 for line in fh:
     w = line.split()
