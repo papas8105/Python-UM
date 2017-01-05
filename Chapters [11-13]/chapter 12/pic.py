@@ -8,17 +8,17 @@ while True:
 	data = mysock.recv(5120)
 	if len(data) < 1:
 		break
-	count = count + len(data)
+	count   += len(data)
 	print len(data) , count
 	picture += data
 mysock.close()
-pos = picture.find("\r\n\r\n");
+pos     = picture.find("\r\n\r\n");
 print 'Header length', pos
 print picture[:pos]
 picture = picture[pos+4:]
-fhand = open("stuff.jpg","w")
-fhand.write(picture);
-fhand.close();
+fhand   = open("stuff.jpg","w")
+fhand.write(picture)              ;
+fhand.close()                     ;
 '''
 2828 2828
 1414 4242

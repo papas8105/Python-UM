@@ -5,7 +5,7 @@ You should use raw_input to read a string and float() to convert the string to a
 Do not worry about error checking or bad user data.
 '''
 # This first line is provided for you
-hrs  = raw_input("Enter Hours: ")
-rate = raw_input("Enter the hourly wage rate: ")
+hrs          = raw_input("Enter Hours: ")
+rate         = raw_input("Enter the hourly wage rate: ")
 [hrs , rate] = [float(hrs) , float(rate)]
-print hrs * rate
+print          hrs * rate

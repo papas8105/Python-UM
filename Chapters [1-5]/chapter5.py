@@ -10,14 +10,15 @@ smallest = None
 l = list()
 while True:
     num = raw_input("Enter a number: ")
-    if num == "done" : break
+    if  num  == "done": 
+    	break
     try:
-        num == int(num)
+        num  == int(num)
     except:
         print 'Invalid input'
         continue
     l.append(int(num))
-    largest = max(l)
+    largest  = max(l)
     smallest = min(l)
-print "Maximum is",largest
-print 'Minimum is',smallest
+print 'The maximum integer you gave as input is ',largest,'.'
+print 'The minimun integer you gave as input is ',smallest,'.'

@@ -17,7 +17,7 @@ if len(fname) < 3:  fname = 'mbox-short.txt'
 fh = open(fname)
 count = 0; l = 0;
 for line in fh:
-    if line.startswith("X-DSPAM-Confidence:") : 
+    if line.startswith("X-DSPAM-Confidence:") :
         count += 1
         pos = line.find(':') + 1
         n = float(line[pos:])

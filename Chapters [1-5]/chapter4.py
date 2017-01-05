@@ -13,7 +13,7 @@ def computepay(h,r):
         return 40 * r - 1.5 * (40 - h) * r
     else:
         return h * r
-hrs = float(raw_input("Enter Hours:"))
+hrs  = float(raw_input("Enter Hours:"))
 rate = float(raw_input("Enter the hourly wage rate:"))
-p = computepay(hrs , rate)
+p    = computepay(hrs , rate)
 print p

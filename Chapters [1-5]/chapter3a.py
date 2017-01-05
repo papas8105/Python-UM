@@ -5,8 +5,8 @@ Use 45 hours and a rate of 10.50 per hour to test the program (the pay should be
 You should use raw_input to read a string and float() to convert the string to a number. 
 Do not worry about error checking the user input - assume the user types numbers properly. 
 '''
-hrs = raw_input("Enter Hours: ")
-rate = raw_input("Enter the hourly wage rate: ")
+hrs     = raw_input("Enter Hours: ")
+rate    = raw_input("Enter the hourly wage rate: ")
 [h , r] = [float(hrs),float(rate)]
 if h >= 40:
     pay = 40 * r + (h-40)*r*1.5

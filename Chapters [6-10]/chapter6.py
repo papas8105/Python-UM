@@ -5,4 +5,4 @@ of the line below. Convert the extracted value to a floating point number and pr
 text  = "X-DSPAM-Confidence:    0.8475";
 index = text.find(':') + 1
 value = text[index : ].lstrip()
-print float(value) 
+print float(value)
